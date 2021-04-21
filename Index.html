@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-  <html>
-  
-    <head>
+	<head>
 	<link rel="stylesheet" href="Styles.css">
     <title>Computer Science</title>
+	
     </head>
+	
+	
     <body>
 	<div id="mySidenav" class="sidenav">
 	<a href="Index.html">Computer Science Revision</a>
@@ -17,7 +17,26 @@
 	
 	<h1>My Computer Science Revision Website</h1>
 	
-	<h2>This is where i intend to keep all of my revision materials</h2>
+	<div>
+	<button type="button" onclick="myFunction()">Random Questions!!</button>
+	</div>
+	
+	<img id="demo" class = "RandomImg" >
+
+	<script>
+	function myFunction() { 
+	var str1 = "https://raw.githubusercontent.com/ewanwalker/ewanwalker/main/Questions/image_";
+	var str2 = ".png";
+
+	var num = Math.floor((Math.random() * 4) + 1);
+	
+	var n = num.toString();
+	
+	var res = str1.concat(n).concat(str2);
+	
+	document.getElementById("demo").src = res;
+	}
+	</script>
 	
     </body>
-  </html>
+

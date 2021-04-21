@@ -60,7 +60,7 @@ h4
 }
 
 img {
-  width: 40%;
+  width: 80%;
   height: auto;
   transition: 0.5s;
 }
@@ -71,3 +71,12 @@ img {
 	background-color: Yellow;
 	transition: 0.5s;
 }
+
+.RandomImg
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	
+}
+
