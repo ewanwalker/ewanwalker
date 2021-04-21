@@ -19,22 +19,36 @@
 	
 	<div>
 	<button type="button" onclick="myFunction()">Random Questions!!</button>
+	<button type="button" onclick="ToggleVisability()">Answer!!</button>
 	</div>
 	
 	<img id="demo" class = "RandomImg" >
+	
+	<img id="Answer" class = "RandomImg" >
 
 	<script>
 	function myFunction() { 
 	var str1 = "https://raw.githubusercontent.com/ewanwalker/ewanwalker/main/Questions/image_";
-	var str2 = ".png";
+	var str2 = "https://raw.githubusercontent.com/ewanwalker/ewanwalker/main/Answers/Answer_";
+	var str3 = ".png";
 
-	var num = Math.floor((Math.random() * 4) + 1);
+	var num = Math.floor((Math.random() * 8) + 1);
 	
 	var n = num.toString();
 	
-	var res = str1.concat(n).concat(str2);
+	var res = str1.concat(n).concat(str3);
+	var res2 = str2.concat(n).concat(str3);
 	
 	document.getElementById("demo").src = res;
+	document.getElementById("Answer").src = res2;
+	}
+	function ToggleVisability() {
+		var x = document.getElementById("Answer");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
 	}
 	</script>
 	
