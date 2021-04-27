@@ -92,13 +92,11 @@ img {
 button {
 
 	height: 50px;
-	width: 100px;
-	background-color: gray;
-	border: none;
+	width: 49%;
 	background: none;
-	padding: 0;
 	font-family: sans-serif;
 	font-size: 18px;
+	
 }
 
 .IndexDiv {
@@ -108,10 +106,10 @@ button {
 	width: 100%;
 }
 
-.ButtonLeft{
+.ButtonLeft a{
 		display: left;
 }
-.ButtonRight{
+.ButtonRight a{
 		display: right;
 }
 .Center{
@@ -123,4 +121,5 @@ button {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;	
+	font-size: auto;
 }

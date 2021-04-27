@@ -6,6 +6,7 @@
 	
 	
     <body>
+	<!-- The navigation bar on the left side of the page -->
 	<div id="mySidenav" class="sidenav">
 	<a href="Index.html">Computer Science Revision</a>
 	<a href="Comp 2.html">Component 2</a>
@@ -15,38 +16,51 @@
 	<a href="Thinking Logically.html">Thinking Logically</a>
 	</div>
 	
+	<!-- Answer and question buttons that call javascript functions when pressed -->
 	<div class = "IndexDiv">
-	<button type="button" onclick="myFunction()" class = "ButtonLeft">Questions</button>
-	<button type="button" onclick="ToggleVisability()" class = "ButtonRight">Answers</button>
+	<button type="button" onclick="myFunction()" class = "ButtonLeft">Press for Questions</button>
+	<button type="button" onclick="ToggleVisability()" class = "ButtonRight">Press for Answers</button>
 	</div>
-	
+	<!-- The image for the random question to be assigned to -->
 	<img id="demo" class = "RandomImg" >
-	
+	<!-- TextArea for the user to type their answer -->
 	<textarea name="text" cols="100" rows="5" class = "textarea">
-Write your answer here or on paper!  BEWARE IF YOU RELOAD THE PAGE YOUR ANSWER WILL DISSAPEAR but getting a new question or the answers wont dont worry, drag the bottom right of the square to resize it
+					  TextBox For Answer.
 	</textarea>
-	
+	<!-- division to split the Answer header from the Image and the TextArea -->
 	<div>
+	<!-- Answer header to indicate the answer is below -->
 		<h3 class = "Center"> Answer: </h3>
 	</div>
+	<!-- The image for the Answer to be assigned to -->
 	<img id="Answer" class = "RandomImgAnswers" >
-
+	<!-- Javascript functions -->
 	<script>
+	<!-- MyFunction gets a random number concatenates it into a src which is then assigned to the images -->
 	function myFunction() { 
+	<!-- start of the src for a Image located in the Questions file -->
 	var str1 = "https://raw.githubusercontent.com/ewanwalker/ewanwalker/main/Questions/image_";
+	<!-- start of the src for a Image located in the Questions file -->
 	var str2 = "https://raw.githubusercontent.com/ewanwalker/ewanwalker/main/Answers/Answer_";
+	<!-- the file type of the image to be got -->
 	var str3 = ".png";
-
+	<!-- returnes a random number under the num tag -->
 	var num = Math.floor((Math.random() * 23) + 1);
-	
+	<!-- converts the variable num to a string var n -->
 	var n = num.toString();
-	
+	<!-- Concaternation -->
 	var res = str1.concat(n).concat(str3);
 	var res2 = str2.concat(n).concat(str3);
-	
+	<!-- Assigns the images the srcs created -->
 	document.getElementById("demo").src = res;
 	document.getElementById("Answer").src = res2;
+	<!-- resets the answers visability after a new question is requested -->
+	var x = document.getElementById("Answer");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+		}
 	}
+	<!-- fuction ToggleVisability() checks to see the answers visability then swiches it -->
 	function ToggleVisability() {
 		var x = document.getElementById("Answer");
 		if (x.style.display === "none") {
