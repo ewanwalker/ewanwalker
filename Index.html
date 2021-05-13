@@ -3,37 +3,28 @@
     <title>Computer Science</title>
 	
     </head>
-	
-	
-    <body>
-	<!-- The navigation bar on the left side of the page -->
-	<div id="mySidenav" class="sidenav">
-	<a href="Index.html">Computer Science Revision</a>
-	<a href="Comp 2.html">Component 2</a>
-	<a href="Thinking Abstractly.html">Thinking Abstractly</a>
-	<a href="Thinking Ahead.html">Thinking Ahead</a>
-	<a href="Thinking Procedurally.html">Thinking Procedurally</a>
-	<a href="Thinking Logically.html">Thinking Logically</a>
+	<body>
+	<img src = "images/EW Logo.png" class = "img">	
+    
+	<div id="navbar">
+	<a  href="Index.html">Component 2 Questions</a>
+	<a   onclick="myFunction()">Press for Questions</a>
+	<a   onclick="ToggleVisability()">Press for Answers</a>
 	</div>
+	<h1> - This is a Revision tool for revising Component 2 of OCR Computer Science at A level.</h1>
+	<h1> - Use the buttons provided To get a Random question And View the Mark scheme for that question.</h1>
+	<h1> - Also provided is a Text Area for an Answer to be inputted if needed. </h1>
+	<h1> - Good Luck ☺</h1>
 	
-	<!-- Answer and question buttons that call javascript functions when pressed -->
-	<div class = "IndexDiv">
-	<button type="button" onclick="myFunction()" class = "ButtonLeft">Press for Questions</button>
-	<button type="button" onclick="ToggleVisability()" class = "ButtonRight">Press for Answers</button>
-	</div>
+	
 	<!-- The image for the random question to be assigned to -->
 	<img id="demo" class = "RandomImg" >
-	<!-- TextArea for the user to type their answer -->
-	<textarea name="text" cols="100" rows="5" class = "textarea">
-					  TextBox For Answer.
-	</textarea>
-	<!-- division to split the Answer header from the Image and the TextArea -->
-	<div>
-	<!-- Answer header to indicate the answer is below -->
-		<h3 class = "Center"> Answer: </h3>
-	</div>
+	
+	<textarea class = "textarea"></textarea>
+	
 	<!-- The image for the Answer to be assigned to -->
 	<img id="Answer" class = "RandomImgAnswers" >
+	
 	<!-- Javascript functions -->
 	<script>
 	<!-- MyFunction gets a random number concatenates it into a src which is then assigned to the images -->
@@ -69,6 +60,24 @@
 			x.style.display = "none";
 		}
 	}
+	// When the user scrolls the page, execute myFunction
+	window.onscroll = function() {Stick()};
+
+	// Get the navbar
+	var navbar = document.getElementById("navbar");
+
+	// Get the offset position of the navbar
+	var sticky = navbar.offsetTop;
+
+	// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+	function Stick() {
+	if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+	} else {
+		navbar.classList.remove("sticky");
+	}
+}
+
 	</script>
 	
     </body>
