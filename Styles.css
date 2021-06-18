@@ -41,7 +41,7 @@ body
 {
 	font-family: sans-serif;
 	transition: 0.3s;
-	background: #111111
+	background: #d7ceb3
     
 }
 
@@ -52,7 +52,7 @@ h1
 	font-family: Courier New;
 	transition: 0.1s;
     font-size: 22px;
-	color: #CCCCCC;
+	color: #000000;
 }
 
 h2
@@ -136,7 +136,7 @@ button {
 
 .textarea {
 	outline-color:#ffffff ;
-	background-color: #cccccc;
+	background-color: #008080;
 	display: block;
 	width: 100%;	
 	height: 20%;
@@ -155,6 +155,6 @@ button {
 }
 .WhiteBackground
 {
-	background-color: #ffffff;
+	background-color: #008080;
 	
 }
