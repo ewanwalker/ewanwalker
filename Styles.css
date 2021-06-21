@@ -1,24 +1,26 @@
 /* Style the navbar */
 #navbar {
   overflow: hidden;
-  background-color: #333333;
+  background-color: #ffffff;
 }
 
 /* Navbar links */
 #navbar a {
   float: left;
   display: block;
-  color: white;
+  color: #000000;
   font-family: Courier New;
-  font-size: auto;
+  font-size: 100%;
   text-align: center;
-  padding: 14px;
+  padding: 1%;
+  border-radius: 25px;
   text-decoration: none;
+  margin-left: 13%;
 }
 
 a:hover {
   transition: 0.8s;
-  background-color:#666666 ;
+  background-color:#7c5295 ;
   cursor:pointer;
 }
 /* Page content */
@@ -41,22 +43,21 @@ body
 {
 	font-family: sans-serif;
 	transition: 0.3s;
-	background: #d7ceb3
-    
+	background: ffffff;
 }
 
 h1
 {
-	top: 8%;
 	text-align: center;
 	font-family: Courier New;
 	transition: 0.1s;
-    font-size: 22px;
+    font-size: auto;
 	color: #000000;
 }
 
 h2
 {
+	font-size: auto;
 	text-align: center; 
 	transition: 0.5s;
 }
@@ -135,11 +136,12 @@ button {
 }
 
 .textarea {
-	outline-color:#ffffff ;
-	background-color: #008080;
+	outline-color:#000000 ;
+	background-color: #000000;
 	display: block;
 	width: 100%;	
 	height: 20%;
+	color: #ffffff;
 	font-size: auto;
     overflow: auto;
     padding: 0;
@@ -153,8 +155,55 @@ button {
   text-align: center;
 	
 }
-.WhiteBackground
+.blackBackground
 {
-	background-color: #008080;
+	background-color: #444444;
 	
+}
+.dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 17%; 
+  margin-right: auto; 
+  margin-top: 4%;  
+}
+.square {
+  height: 5%;
+  width: 20%;
+  background-color: white;
+  display: inline-block;
+  margin-left: 10%;
+  border-radius: 25px 25px 0px 0px;
+}
+.greysquare {
+  height: 5%;
+  width: 20%;
+  background-color: #444444;
+  display: inline-block;
+  margin-left: 70%;
+  border-radius:  0px 0px 25px 25px;
+}
+.blue
+{
+	 background-color: #3c1361;
+}
+.red
+{
+	 background-color: #52307c;
+}
+.green
+{
+	 background-color: #663a82;
+}
+.yellow
+{
+	 background-color: #7c5295;
+}
+.white
+{
+	color: #B589D6;
+	margin-top: 5%;
+	padding: 5%;
 }
