@@ -1,0 +1,124 @@
+/* Style the navbar */
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+#navbar {
+  overflow: hidden;
+  background-color: #222222;
+  box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);
+}
+
+/* Navbar links */
+#navbar a {
+	background-color: #333333;
+	box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);
+}
+#background
+{
+	background-color: #222222;
+}
+a:hover {
+  transition: 0.8s;
+  background-color:#000000;
+  cursor:pointer;
+}
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #222222;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+body
+{
+	font-family: sans-serif;
+	transition: 0.3s;
+	background: #111111;
+	margin:0;
+}
+.Main
+{
+	background-color: #111111;
+	height:auto;
+}
+
+h1
+{
+	font-family: 'Ubuntu Mono', monospace;
+	color: #ffc30b;
+	top: 0;
+	position: absolute;
+	margin-left:12vw;
+	margin-right:8vw;
+	font-size: 5vw;
+	margin-top:15vw;
+	user-select: none;
+}
+.navbarText
+{
+  display: inline-block;
+  padding: 0.5vw;
+  color: #ffc30b;
+  font-family: 'Ubuntu Mono', monospace;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 12%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  user-select: none;
+}
+.RandomImg
+{
+	margin-left: 5vw;
+	margin-right: 5vw;
+	display: block;
+	width: 80vw;
+	height: auto;
+	margin-bottom: 10vw;
+	margin-top: 10vw;
+}
+.RandomImgAnswers
+{
+	margin-left: 5vw;
+	margin-right: 5vw;
+	width: 80vw;
+	display: none;
+	height: auto;
+}
+.IndexDiv {
+	background-color: gray;
+	font-size: 18px;
+	padding: 0px;
+	width: 100%;
+}
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 35vw;
+  background-color: #000000;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.container {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+
