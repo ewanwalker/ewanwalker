@@ -98,7 +98,10 @@ h2
   user-select: none;
 }
 .RandomImg
-{
+{	
+    filter: brightness(150%);
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
 	margin-left: 5vw;
 	margin-right: 5vw;
 	display: block;
