@@ -43,7 +43,7 @@ a:hover {
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
-  padding-top: 60px;
+  padding-top: 1px;
 }
 body
 {
@@ -54,10 +54,9 @@ body
 }
 .Main
 {
-	background-color: #111111;
-	height:auto;
+	width: 100%;
+	background-color: #000000;
 }
-
 h1
 {
 	font-family: 'Ubuntu Mono', monospace;
@@ -110,15 +109,20 @@ h2
 	margin-bottom: 10vw;
 	margin-top: 10vw;
 	z-index: 10;
+	user-select: none;
 }
 .RandomImgAnswers
 {
+	filter: brightness(150%);
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
 	margin-left: 5vw;
 	margin-right: 5vw;
 	width: 80vw;
 	display: none;
 	height: auto;
 	z-index: 10;
+	user-select: none;
 }
 .IndexDiv {
 	background-color: gray;
@@ -147,11 +151,9 @@ canvas{
 .Sketch{
   z-index: 0;
   display: flex;
-
-  /* This centers our sketch horizontally. */
   justify-content: center;
-
-  /* This centers our sketch vertically. */
   align-items: center;
 }
-
+ p{
+	 color: white;
+ }
