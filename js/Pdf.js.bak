@@ -1,6 +1,6 @@
- <script>
-        var datass = '';
+		var datass = '';
         var DataArr = [];
+		var FinishedString = "";
 		var BASE64_MARKER = ';base64,';
 		PDFJS.workerSrc = '';
 		
@@ -48,17 +48,11 @@
 
                             finalString += item.str + " ";
                         }
-						let position = finalString.search("END OF QUESTION PAPER");
 						
+						FinishedString = finalString;
 						
-						let RandomInt = Math.floor(Math.random() * 11);
-						let NextQuestion = RandomInt + 1;
-						let QuestionStart = finalString.indexOf(RandomInt);
-						let QuestionEnd = finalString.indexOf(NextQuestion);
-						let result = finalString.substr(QuestionStart, QuestionEnd);
-                        
-						var div = document.getElementById('output');
-                        div.innerHTML += (resu);
+                        resolve(FinishedString);
+						
                     });
                 });
             });
@@ -82,15 +76,9 @@
 
                 // Execute all the promises
                 Promise.all(pagesPromises).then(function (pagesText) {
- 
-                    var outputStr = "";
-                    for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
-					
                         var div = document.getElementById('output');
-                        div.innerHTML += (pagesText[pageNum]);
-                    }
-
-
+						FinishedString = pagesText;
+                        div.innerHTML += (pagesText);
                 });
 
             }, function (reason) {
@@ -98,5 +86,31 @@
                 console.error(reason);
             });
         }
+		function RandomQuestion()
+		{
+			var div = document.getElementById('output');
+			
+			//Making the pdf into one string
+			var PdfAsString = "";
+			for (x = 0; x <= FinishedString.length; x++)
+			{
+				PdfAsString += FinishedString[x];
+			}
+			// Get a random number 
+			var RandomNumber = getRndInteger(0,FinishedString.length)
+			//Finding teh question 
+			var QuestionStart = PdfAsString.indexOf(RandomNumber + '.');
+			QuestionPositionEnd = RandomNumber++;
+			var QuestionEnd = PdfAsString.indexOf(QuestionPositionEnd + '.');
+			
+			let Question = PdfAsString.substring(QuestionStart, QuestionEnd);
+			
+			//Question = Question.split(String.fromCharCode(169))[0];
 
-    </script>
+            div.innerHTML = (Question);
+		}
+		function getRndInteger(min, max) {
+			
+			return Math.floor(Math.random() * (max - min + 1) ) + min;
+		
+		}

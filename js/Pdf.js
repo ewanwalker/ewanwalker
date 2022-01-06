@@ -90,17 +90,24 @@
 		{
 			var div = document.getElementById('output');
 			
-			var RandomNumber = getRndInteger(0,FinishedString.length)
-			
-			result = FinishedString[RandomNumber].split(String.fromCharCode(169))[0]
-			
-			while (result == '' )
+			//Making the pdf into one string
+			var PdfAsString = "";
+			for (x = 0; x <= FinishedString.length; x++)
 			{
-				var RandomNumber = getRndInteger(0,FinishedString.length)
-				result = FinishedString[RandomNumber].split(String.fromCharCode(169))[0]
+				PdfAsString += FinishedString[x];
 			}
+			// Get a random number 
+			var RandomNumber = getRndInteger(0,FinishedString.length)
+			//Finding the question 
+			var QuestionStart = PdfAsString.indexOf(RandomNumber + '.');
+			QuestionPositionEnd = RandomNumber++;
+			var QuestionEnd = PdfAsString.indexOf(QuestionPositionEnd + '.');
 			
-            div.innerHTML = (result);
+			let Question = PdfAsString.substring(QuestionStart, QuestionEnd);
+			
+			//Question = Question.split(String.fromCharCode(169))[0];
+
+            div.innerHTML = (Question);
 		}
 		function getRndInteger(min, max) {
 			
