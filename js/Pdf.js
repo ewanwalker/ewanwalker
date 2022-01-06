@@ -1,0 +1,109 @@
+		var datass = '';
+        var DataArr = [];
+		var FinishedString = "";
+		var BASE64_MARKER = ';base64,';
+		PDFJS.workerSrc = '';
+		
+        function ExtractText() {
+			
+			//Takes the inputted file 
+            var input = document.getElementById("file-id");
+            var fReader = new FileReader();
+			//Reads the inputted file as data
+            fReader.readAsDataURL(input.files[0]);
+			//Once loaded it runs the convert data URI to binary function passing the read data 
+            fReader.onloadend = function (event) {
+                convertDataURIToBinary(event.target.result);
+            }
+        }
+		
+        function convertDataURIToBinary(dataURI) {
+			//uses the 
+            var base64Index = dataURI.indexOf(BASE64_MARKER) + BASE64_MARKER.length;
+            var base64 = dataURI.substring(base64Index);
+            var raw = window.atob(base64);
+            var rawLength = raw.length;
+            var array = new Uint8Array(new ArrayBuffer(rawLength));
+			
+            for (var i = 0; i < rawLength; i++) {
+				
+                array[i] = raw.charCodeAt(i);
+            }
+            pdfAsArray(array)
+
+        }
+
+        function getPageText(pageNum, PDFDocumentInstance) {
+            // Return a Promise that is solved once the text of the page is retrieven
+            return new Promise(function (resolve, reject) {
+                PDFDocumentInstance.getPage(pageNum).then(function (pdfPage) {
+                    // The main trick to obtain the text of the PDF page, use the getTextContent method
+                    pdfPage.getTextContent().then(function (textContent) {
+                        var textItems = textContent.items;
+                        var finalString = "";
+
+                        // Concatenate the string of the item to the final string
+                        for (var i = 0; i < textItems.length; i++) {
+                            var item = textItems[i];
+
+                            finalString += item.str + " ";
+                        }
+						
+						FinishedString = finalString;
+						
+                        resolve(FinishedString);
+						
+                    });
+                });
+            });
+        }
+
+        function pdfAsArray(pdfAsArray) {
+
+            PDFJS.getDocument(pdfAsArray).then(function (pdf) {
+
+                var pdfDocument = pdf;
+                // Create an array that will contain our promises
+                var pagesPromises = [];
+
+                for (var i = 1; i < pdf.pdfInfo.numPages; i++) {
+                    // Required to prevent that i is always the total of pages
+                    (function (pageNumber) {
+                        // Store the promise of getPageText that returns the text of a page
+                        pagesPromises.push(getPageText(pageNumber, pdfDocument));
+                    })(i + 1);
+                }
+
+                // Execute all the promises
+                Promise.all(pagesPromises).then(function (pagesText) {
+                        var div = document.getElementById('output');
+						FinishedString = pagesText;
+                        div.innerHTML += (pagesText);
+                });
+
+            }, function (reason) {
+                // PDF loading error
+                console.error(reason);
+            });
+        }
+		function RandomQuestion()
+		{
+			var div = document.getElementById('output');
+			
+			var RandomNumber = getRndInteger(0,FinishedString.length)
+			
+			result = FinishedString[RandomNumber].split(String.fromCharCode(169))[0]
+			
+			while (result == '' )
+			{
+				var RandomNumber = getRndInteger(0,FinishedString.length)
+				result = FinishedString[RandomNumber].split(String.fromCharCode(169))[0]
+			}
+			
+            div.innerHTML = (result);
+		}
+		function getRndInteger(min, max) {
+			
+			return Math.floor(Math.random() * (max - min + 1) ) + min;
+		
+		}
