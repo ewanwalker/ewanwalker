@@ -18,8 +18,8 @@
 		<label for="file-id" class="navbarText">Upload PDF</label> 
 	</div>	
 <body>
-
 	<input type="file" id="file-id" name="file_name" onchange="ExtractText();" class="navbarText" hidden/>
+	<input type="file" id="actual-btn" hidden/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
 	

@@ -108,9 +108,9 @@
 				// Get a random number 
 				var RandomNumber = getRndInteger(0,FinishedString.length)
 				//Finding the question 
-				var QuestionStart = PdfAsString.indexOf(RandomNumber + '.'||RandomNumber + '(');
+				var QuestionStart = PdfAsString.indexOf(QuestionPositionEnd + '('||QuestionPositionEnd + '.');
 				QuestionPositionEnd = RandomNumber+1;
-				var QuestionEnd = PdfAsString.indexOf(QuestionPositionEnd + '.'||QuestionPositionEnd + '(');
+				var QuestionEnd = PdfAsString.indexOf(QuestionPositionEnd + '('||QuestionPositionEnd + '.');
 			}
 
 			let Question = PdfAsString.substring(QuestionStart, QuestionEnd);
