@@ -17,7 +17,7 @@
             }
         }
 		
-        function convertDataURIToBinary(dataURI) {S
+        function convertDataURIToBinary(dataURI) {
             var base64Index = dataURI.indexOf(BASE64_MARKER) + BASE64_MARKER.length;
             var base64 = dataURI.substring(base64Index);
             var raw = window.atob(base64);
@@ -55,7 +55,7 @@
                     });
                 });
             });
-        
+        }
 
         function pdfAsArray(pdfAsArray) {
 
