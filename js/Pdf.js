@@ -91,7 +91,7 @@
 			var div = document.getElementById('output');
 			
 			//Making the pdf into one string
-			var PdfAsString = "";
+			let PdfAsString = "";
 			for (x = 0; x <= FinishedString.length; x++)
 			{
 				PdfAsString += FinishedString[x];
@@ -100,12 +100,22 @@
 			var RandomNumber = getRndInteger(0,FinishedString.length)
 			//Finding the question 
 			var QuestionStart = PdfAsString.indexOf(RandomNumber + '.');
-			QuestionPositionEnd = RandomNumber++;
+			QuestionPositionEnd = RandomNumber+1;
 			var QuestionEnd = PdfAsString.indexOf(QuestionPositionEnd + '.');
 			
+			if(QuestionEnd == -1)
+			{
+				// Get a random number 
+				var RandomNumber = getRndInteger(0,FinishedString.length)
+				//Finding the question 
+				var QuestionStart = PdfAsString.indexOf(QuestionPositionEnd + '('||QuestionPositionEnd + '.');
+				QuestionPositionEnd = RandomNumber+1;
+				var QuestionEnd = PdfAsString.indexOf(QuestionPositionEnd + '('||QuestionPositionEnd + '.');
+			}
+
 			let Question = PdfAsString.substring(QuestionStart, QuestionEnd);
 			
-			//Question = Question.split(String.fromCharCode(169))[0];
+			Question = Question.split(String.fromCharCode(169))[0];
 
             div.innerHTML = (Question);
 		}
