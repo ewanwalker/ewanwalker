@@ -1,163 +1,191 @@
-/* Style the navbar */
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-#navbar {
-  overflow: hidden;
-  background-color: #222222;
-  box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);
-  top:0;
-  z-index: 9999;
-}
-
-/* Navbar links */
-#navbar a {
-	background-color: #333333;
-	box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);
-	z-index: 9999;
-}
-#background
-{
-	background-color: #222222;
-}
-a:hover {
-  transition: 0.8s;
-  background-color:#000000;
-  cursor:pointer;
-  top:0;
-  z-index: 9999;
-}
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top:0;
-  z-index: 9999;
-  width: 100%;
-  background-color: #222222;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 1px;
-}
-body
-{
-	font-family: sans-serif;
-	transition: 0.3s;
-	background: #111111;
-	margin:0;
-}
-.Main
-{
-	width: 100%;
-	background-color: #000000;
-}
 h1
 {
-	font-family: 'Ubuntu Mono', monospace;
-	color: #bf00ff;
+	font-family:Trebuchet MS;
+	color: #ffffff ;
 	z-index: 9999;
 	position: absolute;
-	margin-left:12vw;
+	margin-left:10vw;
 	margin-right:8vw;
-	font-size: 5vw;
-	margin-top:15vw;
+	font-size: 3vw;
+	margin-top:25vw;
 	user-select: none;
 }
-h2
-{
-	font-family: 'Ubuntu Mono', monospace;
-	color: #bf00ff;
-	z-index: 9999;
-	position: absolute;
-	margin-left:37vw;
-	margin-right:30vw;
-	font-size: 5vw;
-	margin-top:15vw;
+
+h2{
+	font-family:Trebuchet MS;
+	color: #000000 ;
 	user-select: none;
+	margin-left:2vw;
+	font-size: 10vw;
+	
 }
-.navbarText
-{
-  display: inline-block;
-  padding: 0.5vw;
-  color: #bf00ff;
-  font-family: 'Ubuntu Mono', monospace;
+
+h3{
+	font-family:Trebuchet MS;
+	color: #000000 ;
+	user-select: none;
+	margin-top:10vw;
+	margin-left: 40vw;
+	font-size: 5vw;
+	
+}
+h4{
+	font-family:Trebuchet MS;
+	color: #ffffff ;
+	margin-left:10vw;
+	margin-right:8vw;
+	padding-top:5vw;
+	font-size: 2vw;
+}
+p{
+	font-family:Courier New;
+	color: #ffffff ;
+	margin-left:0vw;
+	padding-top:1vw;
+	font-size: 1.2vw;
+}
+
+body{
+	margin:0;	
+	background-color: #ffffff ;
+}
+
+#Section-2{
+	height: 60vw;
+	
+}
+
+#Section-3{
+	height: 60vw;
+	background-color: #000000 ;
+}
+/* ---- Navigation Bar ---- */
+.topnav {
+  overflow: hidden;
+  font-family: Trebuchet MS;
+  z-index: 9999;
+  position: absolute;
+}
+
+.topnav a {
+  float: left;
+  color: #ffffff;
   text-align: center;
-  border-radius: 4px;
+  padding: 8px 16px;
   text-decoration: none;
-  margin-left: 12%;
-  margin-bottom: 1%;
-  margin-top: 1%;
-  font-size: 1.3vw;
+  font-size: 1.6vw;
   user-select: none;
 }
-.RandomImg
-{	
-    filter: brightness(150%);
-    -webkit-filter: invert(100%); /* Safari/Chrome */
-    filter: invert(100%);
-	margin-left: 5vw;
-	margin-right: 5vw;
-	display: block;
-	width: 80vw;
-	height: auto;
-	margin-bottom: 10vw;
-	margin-top: 10vw;
-	z-index: 10;
-	user-select: none;
-}
-.RandomImgAnswers
-{
-	filter: brightness(150%);
-    -webkit-filter: invert(100%); /* Safari/Chrome */
-    filter: invert(100%);
-	margin-left: 5vw;
-	margin-right: 5vw;
-	width: 80vw;
-	display: none;
-	height: auto;
-	z-index: 10;
-	user-select: none;
-}
-.IndexDiv {
-	background-color: gray;
-	font-size: 18px;
-	padding: 0px;
-	width: 100%;
-}
-canvas{
-  display:block;
-  vertical-align:bottom;
-}
-/* ---- particles.js container ---- */
 
+.topnav a:hover {
+  transition: .6s;
+  background-color: #ffffff;
+  color:#000000;
+  cursor: pointer;
+}
+
+.topnav a.right {
+  float: right;
+}
+ 
+/* ---- particles.js container ---- */
 #particles-js{
   width: 100%;
-  height: 35vw;
+  height: 60vw;
   background-color: #000000;
   background-size: cover;
   background-position: 50% 50%;
 }
-.container {
+/* ---- Title Blink ---- */
+
+.typed-out{
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  animation: typing 1s steps(30, end) forwards, blinking 1s infinite;
+  font-size:6vw;
+  width: 0;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80vw; }
+}
+@keyframes blinking {
+  from { border-color: transparent }
+  to { border-color: white; }
+}
+
+/* ---- On scroll reveal ---- */
+
+.reveal{
   position: relative;
-  max-width: 800px; /* Maximum width */
-  margin: 0 auto; /* Center it */
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
 }
-.Sketch{
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
- p{
-	 color: white;
- }
- #output{
-	 color:white;
-	 
- }
+
+.orange{
+	color:#db8644;
+}
+
+.blue{
+	color:#372fa3;
+}
+
+.purple{
+	color:#812abf;
+}
+
+.green{
+	color:#812abf;
+}
+
+/* ---- Creativity Shine ---- */
+
+.Creativity {
+	font-family:Trebuchet MS;
+	color: #000000 ;
+	user-select: none;
+	margin-left:2vw;
+	font-size: 10vw;
+    font-weight: 800;
+    letter-spacing: -2px;
+    animation: flow 6s ease-in-out infinite;
+    background: linear-gradient(-60deg, #0000FF, #800080);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes flow {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+/* ---- Move Monkey ---- */
+
+
+.Monkey {
+	margin-left:60vw;
+	width: 20vw;
+	height:25vw;
+	border-radius: 10vw;
+	position:absolute;
+}
+
+
+.Monkey:hover
+{
+    -webkit-transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+}
