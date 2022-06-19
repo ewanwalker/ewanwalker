@@ -65,12 +65,11 @@ body{
 	font-family:Trebuchet MS;
 	color: #ffffff ;
 	z-index: 9999;
-	position: absolute;
 	margin-left: 45%;
 	font-size: 3vw;
 	margin-top: 20%;
-	margin-bottom:30%;
 	user-select: none;
+	width:100%;
 }
 
 /* ---- Navigation Bar ---- */
