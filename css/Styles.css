@@ -43,7 +43,7 @@ p{
 	color: #ffffff ;
 	margin-left:0vw;
 	padding-top:1vw;
-	font-size: 1.2vw;
+	font-size: 1.4vw;
 }
 
 body{
@@ -52,12 +52,12 @@ body{
 }
 
 #Section-2{
-	height: 60vw;
+	height: 100%;
 	
 }
 
 #Section-3{
-	height: 60vw;
+	height: 100%;
 	background-color: #000000 ;
 }
 
