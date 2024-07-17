@@ -1,0 +1,69 @@
+main h1{
+    width: 100%;
+    text-align: center;
+    padding-top: 9vw;
+    font-size: 11vw;
+    margin: 0%;
+}
+
+*{
+    box-sizing: border-box;
+}
+  
+.row {
+    display: flex;
+    margin-left: 2vw;
+}
+  
+/* Create two equal columns that sits next to each other */
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+main h2{
+    font-size: 3.5vw;
+    margin: 0%;
+}
+main h3{
+    font-size: 3vw;
+}
+
+main p{
+    font-size: 1.8vw;
+    text-align: justify;
+}
+
+#topimg{
+    display: inline-block;
+    width: 45vw;
+    margin-left: 2vw;
+    vertical-align: middle;
+    max-height: 30vw;
+}
+
+#caption{
+    width: 100%;
+    text-align: center;
+    font-weight: 200;
+    margin-top: 0%;
+}
+
+.line:before,
+.line:after {
+    background-color: #6a6a6a;
+    content: "";
+    display: inline-block;
+    height: 0.5px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+.line:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.line:after {
+    left: 0.5em;
+    margin-right: -50%;
+}

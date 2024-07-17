@@ -1,0 +1,46 @@
+
+.container {
+    width: 90%;
+    display: grid;
+    padding-top: 10vw;
+    padding-left: 2vw;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 40vw 40vw ;
+    gap: 2vw;
+    padding-bottom: 2vw;
+}
+
+.item{
+    background-color: rgb(255, 255, 255);
+    border: 1px black dashed;
+    text-decoration: none;
+    height: 100%;
+}
+
+.item h1{
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 3vw;
+    margin: 0%;
+}
+
+.item img{
+    width: 18vw;
+    padding-left: 6vw;
+    padding-top: 3vw;
+}
+
+.item p{
+    text-align: justify;
+    width: 80%;
+    padding-left: 10%;
+    font-size: 1.4vw;
+    padding-top: 1.5vw;
+}
+
+.wrap{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}

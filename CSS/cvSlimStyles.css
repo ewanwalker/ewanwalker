@@ -1,0 +1,104 @@
+.wittgenstein {
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#block1{
+    height: 100%;
+    width: 30vw;
+    background-color: rgb(46, 46, 46);
+    overflow: hidden;
+    display: inline-block;
+    padding-top: 7vw;
+    z-index: -2;
+    font-family: "Wittgenstein", serif;
+}
+
+#block1 img{
+    width: 28vw;
+    height: 25vw;
+    margin-top: 5vw;
+    margin-left: 1vw;
+    border-radius: 30%;
+}
+
+#block1 h2{
+    color: white;
+    font-size: 2vh;
+    width: 100%;
+    text-align: center;
+}
+
+#block1 p{
+    color: white;
+    font-size: 1.8vw;
+    text-align: center;
+    width: 100%;
+}
+
+#block2{
+    top: 10vw;
+    left: 35vw;
+    position: absolute;
+    display: inline-block;
+    width: 60vw;
+    z-index: -2;
+    font-family: "Wittgenstein", serif;
+}
+
+#block2 h1{
+    font-size: 8vw;
+    width: 100%;
+    text-align: center;
+}
+
+#block2 h2{
+    font-size: 2.5vh;
+    width: 100%;
+    text-align: center;
+}
+
+#block2 h3{
+    font-size: 1.5vh;
+    width: 100%;
+    text-align: center;
+}
+
+#block2 p{
+    font-size: 1vh;
+    width: 100%;
+    text-align: center;
+}
+
+#footer{
+    top:100%;
+}
+
+#summaryText{
+    text-align: justify;
+    color: white;
+    font-size: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+h2:before,
+h2:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 30%;
+}
+h2:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+h2:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
