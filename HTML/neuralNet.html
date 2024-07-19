@@ -23,7 +23,7 @@
 
         <main>
             <h1> Neural Networks</h1>
-            <h3 id="caption" class ="line">What are they? what do they do? and how do they do it?</h3>
+            <h3 id="caption" class ="line">What are they? What do they do? How do they do it?</h3>
             <img src="..\Images\Neuron.png" alt="Neuron" id="topimg">
             <img src="..\Images\Perceptron.png" alt="Perceptron" id="topimg">
             <div class="row">
@@ -31,14 +31,24 @@
                     <p id="caption">Neuron Diagram</p>
                     <h2>Introduction</h2>
                     <p> 
-                        I am going to explore Neural Networks they were curated and why followed by building my very first neural network using python, i intend to collate all the knowlege i gather on the way here. i want to know what they are, how they work and why they are so useful in the modern day technological era.
+                        I am going to explore Neural Networks they were curated and why. Followed by building my very first neural network using python, i intend to collate all the knowlege i gather on the way here. i want to know what they are, how they work and why they are so useful in the modern day technological era.
                     </p>
                     <h2>The Neuron and Perceptron</h2>
                     <p> 
                         A neural network is a recreation of a animals nervous system within a computer attempting to imitate brain functionality,
-                        it consists of "perceptrons" which are a inspired by neurons, within an animal a neuron transmits electrical signals across the body both to and from the brain. The perceptron was first theorised in 1943 by Warren McCulloch and Walter Pitts, followed by the first version built on a computer by Frank Rosenblatt in 1957 which was very similar to neurons as they were presented by Nobel Prize laureate Cajal whom was the very first person to have evidence that neurons are seperate showing there are multiple neurons congregated together, each working independantly using signals from eachother.
+                        it consists of "perceptrons" which are a inspired by neurons, within an animal a neuron transmits electrical signals across the body both to and from the brain. The perceptron was first theorised in 1943 by Warren McCulloch and Walter Pitts, followed by the first version built on a computer by Frank Rosenblatt in 1957. 
                         <br> <br>
-                        A perceptron as introduced by Frank Rosenblatt was originally intended to be a machine, funded by the us navy and was able to detect different shapes, thus computer vision was born
+                        A perceptron as introduced by Frank Rosenblatt was originally intended to be a machine, funded by the US Navy and Air Force simply worked on binary inputs (1s or 0s) that were multiplied by a static weight 0 through 1 (0, 0.1, ..., 1) that was set based on the importance of that input. In a real life example say you want to go to the beach and you have a few factors that affect wether you will acctually go or not e.g. if its sunny, if its low tide or if the beach is quiet. If its sunny is quite important so you would give its connection a high weight say 0.7 and if its a low tide is still important but not so much lets say 0.5 and if its quiet gets 0.3 because it doesnt really matter.
+                    </p>
+                    <img src="..\Images\Original perceptron.png" alt="Original Perceptron">
+                    <p>
+                        Each perceptron would have an activation value/ threshhold and if the summation of the inputs multiplied by their respected weights would surpass that number the perceptron would activate.
+                        <br> <br>
+                        Over time the perceptron evolved and a representation of that can be seen at the top of this paper in the perceptron diagram, Firstly using a aggregation function summing all inputs multiplied by their weight together then adding a bias this is shown as:
+                    </p>
+                    <img src="..\Images\summation of inputs.png" alt="Sum" id = sum>
+                    <p>
+                        The result of that summation is then passed into a activation function. this allows the neuron to classify the data more dynamically, There are many different types of activation function that you can use from the step function to ReLU each have their own strengths and weaknesses.
                     </p>
                  </div>
                 <div class="column">

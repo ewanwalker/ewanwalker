@@ -8,7 +8,7 @@
 #block1{
     height: 100%;
     width: 30vw;
-    background-color: rgb(46, 46, 46);
+    background-color: rgb(19, 19, 19);
     overflow: hidden;
     display: inline-block;
     padding-top: 7vw;
@@ -17,11 +17,10 @@
 }
 
 #block1 img{
-    width: 28vw;
-    height: 25vw;
+    width: 25vw;
     margin-top: 5vw;
-    margin-left: 1vw;
-    border-radius: 30%;
+    margin-left: 2.5vw;
+    border-radius: 50%;
 }
 
 #block1 h2{
@@ -69,7 +68,24 @@
 #block2 p{
     font-size: 1vh;
     width: 100%;
+    margin-right: 1vw;
     text-align: center;
+    vertical-align: middle;
+}
+
+#block2 #unip{
+    font-size: 1vh;
+    width: 75%;
+    margin-right: 1vw;
+    text-align: justify;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#block2 #uni{
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #footer{

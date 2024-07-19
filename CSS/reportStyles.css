@@ -34,6 +34,10 @@ main p{
     text-align: justify;
 }
 
+main img{
+    width: 100%;
+}
+
 #topimg{
     display: inline-block;
     width: 45vw;
@@ -47,6 +51,10 @@ main p{
     text-align: center;
     font-weight: 200;
     margin-top: 0%;
+}
+
+#sum{
+    width: 50%;
 }
 
 .line:before,
