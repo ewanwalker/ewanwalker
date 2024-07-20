@@ -42,18 +42,42 @@
                     </p>
                     <img src="..\Images\Original perceptron.png" alt="Original Perceptron">
                     <p>
-                        Each perceptron would have an activation value/ threshhold and if the summation of the inputs multiplied by their respected weights would surpass that number the perceptron would activate.
+                        Each perceptron would have an activation value/ threshold and if the summation of the inputs multiplied by their respected weights would surpass that number the perceptron would activate.
                         <br> <br>
-                        Over time the perceptron evolved and a representation of that can be seen at the top of this paper in the perceptron diagram, Firstly using a aggregation function summing all inputs multiplied by their weight together then adding a bias this is shown as:
+                        However over time the perceptron evolved and a representation of that can be seen at the top of this paper in the perceptron diagram, Firstly using a <b>Aggregation function</b> summing all inputs multiplied by their weight together then adding a bias this is shown as:
                     </p>
                     <img src="..\Images\summation of inputs.png" alt="Sum" id = sum>
                     <p>
-                        The result of that summation is then passed into a activation function. this allows the neuron to classify the data more dynamically, There are many different types of activation function that you can use from the step function to ReLU each have their own strengths and weaknesses.
+                        The result of that summation is then passed into a <b>Activation function</b>. this allows the neuron to add non linearity to the output, There are many different types of activation function that you can use from the step function to ReLU each have their own strengths and weaknesses. The output is weighed against the threshold value and if it exceeds it the perceptron fires and outputs a 1 or if not a 0.
                     </p>
                  </div>
                 <div class="column">
                     <p id="caption">Perceptron Diagram</p>
-                    <p>Some text..</p>
+                    
+                    <p>
+                        
+                        <br> <br>
+                        <b>How do Perceptrons improve accuracy?</b><br>
+
+                        Perceptrons are trained by adjusting the weights accordingly to the error in the output. this can be done in many ways and the learning process consists of feeding the perceptron with labeled examples of inputs (the desired output is known) this allows for a comparison to be made and ajust the weights as needed, aiming to minimise the error. This means the perceptron becomes far more accurate in making predictions.
+
+                        
+                    </p>
+                    <h2>A Neural Network</h2>
+                    <p>
+                        An individual Perceptron is a Neural Network within itself, it is the simplest form but when combined with multiple more Perceptrons it can be used to solve much more complex problems 
+                    </p>
+                    <img src="..\Images\Net.png" alt="neural net">
+                    <p>
+                        There are layers to a Neural Network these include: The <b>Input Layer</b>, <b>Hidden Layers</b> and the <b>Output Layer</b> and each serve an important purpose within the Net.
+                        <br> <br>
+                        Starting at the input Layer this is where the network takes data in, These Perceptrons have no Dendrons (incoming connections also known as incoming edges)
+                        <br> <br>
+                        Work in Progress...
+                        
+
+                    </p>
+
                 </div>
             </div>
         </main>
