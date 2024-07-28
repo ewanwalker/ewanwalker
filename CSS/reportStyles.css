@@ -21,7 +21,7 @@ main h1{
 /* Create two equal columns that sits next to each other */
 .column {
     flex: 50%;
-    padding: 10px;
+    padding: 3%;
 }
 
 main h2{
@@ -39,12 +39,13 @@ main p{
 
 main img{
     width: 100%;
+
 }
 
 #topimg{
     display: inline-block;
-    width: 45vw;
-    margin-left: 2vw;
+    width: 43vw;
+    margin-left: 4vw;
     vertical-align: middle;
     max-height: 30vw;
 }
@@ -53,11 +54,13 @@ main img{
     width: 100%;
     text-align: center;
     font-weight: 200;
+    font-size: 1.4vw;
     margin-top: 0%;
 }
 
 #sum{
     width: 50%;
+    margin-left: 25%;
 }
 
 .line:before,
@@ -78,3 +81,5 @@ main img{
     left: 0.5em;
     margin-right: -50%;
 }
+
+

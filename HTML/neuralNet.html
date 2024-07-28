@@ -31,54 +31,66 @@
                     <p id="caption">Neuron Diagram</p>
                     <h2>Introduction</h2>
                     <p> 
-                        I am going to explore Neural Networks they were curated and why. Followed by building my very first neural network using python, i intend to collate all the knowlege i gather on the way here. i want to know what they are, how they work and why they are so useful in the modern day technological era.
+                         Neural Networks are an ever expanding topic of computing and is a very powerful tool for predictive analysis, but what I want to know is how they work and how did they evolve over time.
                     </p>
                     <h2>The Neuron and Perceptron</h2>
                     <p> 
-                        A neural network is a recreation of a animals nervous system within a computer attempting to imitate brain functionality,
-                        it consists of "perceptrons" which are a inspired by neurons, within an animal a neuron transmits electrical signals across the body both to and from the brain. The perceptron was first theorised in 1943 by Warren McCulloch and Walter Pitts, followed by the first version built on a computer by Frank Rosenblatt in 1957. 
+                        A neural network is a recreation of a animals nervous system within a computer, which attempts to imitate brain functionality. They consist of "Perceptrons" which are inspired by neurons, the  role of which is to transmit electrical signals across the animals body both to and from the brain. The Perceptron was first theorized in 1943 by Warren McCulloch and Walter Pitts, followed by the first version built on a computer by Frank Rosenblatt in 1957. 
                         <br> <br>
-                        A perceptron as introduced by Frank Rosenblatt was originally intended to be a machine, funded by the US Navy and Air Force simply worked on binary inputs (1s or 0s) that were multiplied by a static weight 0 through 1 (0, 0.1, ..., 1) that was set based on the importance of that input. In a real life example say you want to go to the beach and you have a few factors that affect wether you will acctually go or not e.g. if its sunny, if its low tide or if the beach is quiet. If its sunny is quite important so you would give its connection a high weight say 0.7 and if its a low tide is still important but not so much lets say 0.5 and if its quiet gets 0.3 because it doesnt really matter.
+                        A Perceptron -as introduced by Frank Rosenblatt- was originally intended to be a machine, funded by the US Navy and Air Force simply worked on binary inputs (1s or 0s) that were multiplied by a static weight 0 through 1 (0, 0.1, ..., 1) that was set based on the importance of that input. A real life example of this would be say you want to go to the beach and there is a multitude of factors that affect whether you will actually go e.g. if its sunny, if its low tide or if the beach is quiet. If it's sunny is deemed most important so you would assign it's connection a high weight say 0.7 and if it's a low tide is still important but less so, say 0.5, and if it's quiet gets 0.3 because its least important.
                     </p>
-                    <img src="..\Images\Original perceptron.png" alt="Original Perceptron">
+                    <img src="..\Images\Original Perceptron.png" alt="Original Perceptron">
+                    <p id="caption">Example Original Perceptron</p>
                     <p>
-                        Each perceptron would have an activation value/ threshold and if the summation of the inputs multiplied by their respected weights would surpass that number the perceptron would activate.
+                        Each Perceptron would have an activation value/ threshold and if the summation of the inputs multiplied by their respected weights would surpass that number the Perceptron would activate.
                         <br> <br>
-                        However over time the perceptron evolved and a representation of that can be seen at the top of this paper in the perceptron diagram, Firstly using a <b>Aggregation function</b> summing all inputs multiplied by their weight together then adding a bias this is shown as:
+                        However, over time the Perceptron evolved and a representation of that can be seen at the top of this paper in the Perceptron diagram. Firstly, using a <b>Aggregation function</b> summing all inputs multiplied by their weight together then adding a bias this is shown as:
                     </p>
                     <img src="..\Images\summation of inputs.png" alt="Sum" id = sum>
+                    <p id="caption">An Aggregation Function</p>
                     <p>
-                        The result of that summation is then passed into a <b>Activation function</b>. this allows the neuron to add non linearity to the output, There are many different types of activation function that you can use from the step function to ReLU each have their own strengths and weaknesses. The output is weighed against the threshold value and if it exceeds it the perceptron fires and outputs a 1 or if not a 0.
+                        The result of that summation is then passed into an <b>Activation function</b>. This allows the neuron to add non-linearity to the output. There are many different types of activation functions that you can use, ranging from the step function to ReLU, each having their own strengths and weaknesses.
+                    </p>
+                    <img src="..\Images\Sigmoid.png" alt="Sigmoid" id = "Sum">
+                    <p id="caption">the Sigmoid Logistic Function</p>
+                    <p>using the Sigmoid function as a example we can replace the domain (𝑥) with the output of the aggregation function. e or Euler's number is a irrational number and is the base of Natural Logarithms that is roughly 2.71828182845904..., Adding non linearity allows the Neural Network to model more complex relationships for example: </p>
+                    <img src="..\Images\linear_non-linear.png" alt="Example Relationship Boundary" id = "Sigmoid Function">
+                    <p id="caption">Example decision boundary linear and non-linear(made for example purpose only no real data used )</p>
+                    <p>
+                        A decision boundary is a partition that separates vector space into 2 sets, in an ideal world either side of the boundary would only contain a singular class of data. As shown in the Example, non-linearity does a far better job than linear of separating the squares from the triangles.
                     </p>
                  </div>
                 <div class="column">
                     <p id="caption">Perceptron Diagram</p>
-                    
+                    <h2>Dendrites/ Connections</h2> 
                     <p>
-                        
-                        <br> <br>
-                        <b>How do Perceptrons improve accuracy?</b><br>
-
-                        Perceptrons are trained by adjusting the weights accordingly to the error in the output. this can be done in many ways and the learning process consists of feeding the perceptron with labeled examples of inputs (the desired output is known) this allows for a comparison to be made and ajust the weights as needed, aiming to minimise the error. This means the perceptron becomes far more accurate in making predictions.
-
-                        
+                        When connecting Perceptrons together it requires a link in a neuron this would be a dendrite whereas in a Perceptron this goes by a few names such as edges or connections. These hold very minimal information, just the weight of itself (the connection) and which Perceptron it is connected to. 
                     </p>
                     <h2>A Neural Network</h2>
                     <p>
-                        An individual Perceptron is a Neural Network within itself, it is the simplest form but when combined with multiple more Perceptrons it can be used to solve much more complex problems 
+                        An individual Perceptron is a Neural Network within itself however In 1958 Frank Rosenblatt introduced a layered network with multiple Perceptrons which can be used to solve much more complex problems, and then depending on the amount of layers they can be classified into shallow neural networks and deep neural networks.
                     </p>
                     <img src="..\Images\Net.png" alt="neural net">
+                    <p id="caption">A neural network layout</p>
                     <p>
-                        There are layers to a Neural Network these include: The <b>Input Layer</b>, <b>Hidden Layers</b> and the <b>Output Layer</b> and each serve an important purpose within the Net.
+                        In a multi-layer Neural Network there are different types of layers, including: The <b>Input Layer</b>, <b>Hidden Layers</b> and the <b>Output Layer</b> and each serve an important, unique purpose within the Net.
                         <br> <br>
-                        Starting at the input Layer this is where the network takes data in, These Perceptrons have no Dendrons (incoming connections also known as incoming edges)
+                        Starting at the input Layer this is where the network takes data in, These Perceptrons have no Dendrons (incoming connections also known as incoming edges) and passes on the data into the hidden layers. The Hidden Layers in the network simply compute the input which comes from the previous layer and outputs to the next layer and repeats until it is passed into the Output layer which makes the actual prediction based on its inputs.
+                    </p>
+                    <h2>Backpropagation</h2>
+                    <p>
+                        The way multilayer networks adjust the weights across the network is based on the amount of error in the output, now how do you know what weights need to be adjusted and by how much? <b>Backpropagation!</b> first shown off in the 1960s and popularized in 1989 by Rumelhart, Hinton and Williams in their paper “Learning representations by back-propagating errors”. Backpropagation uses a method called the <b>chain rule</b> where the first step is to take the output from the Output layer and put it into a <b>Cost Function</b>, which compares it to the expected output and gives you the error.
                         <br> <br>
-                        Work in Progress...
-                        
-
+                        Then we go from the output layer back through the Perceptrons and adjust the connections' weights accordingly, which is affected by the gradient of the Perceptrons which decreases the amount of change as you go backward. This process repeats each time trying to reduce the amount of error in the output. 
                     </p>
 
                 </div>
+            </div>
+            <div id="CodeSection">
+                <h1>Coding a Neural Network</h1>
+                <h3 id="caption" class ="line">using pure Python and the MNIST data set
+                </h3>
+
             </div>
         </main>
 
