@@ -31,7 +31,7 @@
                     <p id="caption">Neuron Diagram</p>
                     <h2>Introduction</h2>
                     <p> 
-                         Neural Networks are an ever expanding topic of computing and is a very powerful tool for predictive analysis, but what I want to know is how they work and how did they evolve over time.
+                         Artificial Intelligence is an ever expanding topic of computing more specifically neural networks are a very powerful tool for predictive analysis, but how do they work, and what can they do?
                     </p>
                     <h2>The Neuron and Perceptron</h2>
                     <p> 
@@ -53,9 +53,11 @@
                     </p>
                     <img src="..\Images\Sigmoid.png" alt="Sigmoid" id = "Sum">
                     <p id="caption">the Sigmoid Logistic Function</p>
-                    <p>using the Sigmoid function as a example we can replace the domain (𝑥) with the output of the aggregation function. e or Euler's number is a irrational number and is the base of Natural Logarithms that is roughly 2.71828182845904..., Adding non linearity allows the Neural Network to model more complex relationships for example: </p>
+                    <p>using the Sigmoid function as a example we can replace the domain of the function (𝑥) with the output of the aggregation function. e or Euler's number is a irrational number and is the base of Natural Logarithms that is roughly 2.71828182845904..., Adding non linearity allows the Neural Network to model more complex relationships for example: </p>
                     <img src="..\Images\linear_non-linear.png" alt="Example Relationship Boundary" id = "Sigmoid Function">
-                    <p id="caption">Example decision boundary linear and non-linear(made for example purpose only no real data used )</p>
+                    <p id="caption">
+                        Example decision boundary linear and non-linear(made for example purpose only no real data used )
+                    </p>
                     <p>
                         A decision boundary is a partition that separates vector space into 2 sets, in an ideal world either side of the boundary would only contain a singular class of data. As shown in the Example, non-linearity does a far better job than linear of separating the squares from the triangles.
                     </p>
@@ -64,11 +66,11 @@
                     <p id="caption">Perceptron Diagram</p>
                     <h2>Dendrites/ Connections</h2> 
                     <p>
-                        When connecting Perceptrons together it requires a link in a neuron this would be a dendrite whereas in a Perceptron this goes by a few names such as edges or connections. These hold very minimal information, just the weight of itself (the connection) and which Perceptron it is connected to. 
+                        When connecting Perceptrons together it requires a link in a neuron this would be a dendrodendritic synapse whereas in a Perceptron this goes by a few names such as edges or connections. These hold very minimal information, just the weight of itself (the connection) and which Perceptron it is connected to. 
                     </p>
                     <h2>A Neural Network</h2>
                     <p>
-                        An individual Perceptron is a Neural Network within itself however In 1958 Frank Rosenblatt introduced a layered network with multiple Perceptrons which can be used to solve much more complex problems, and then depending on the amount of layers they can be classified into shallow neural networks and deep neural networks.
+                        An individual Perceptron is a Neural Network within itself however In 1958 Frank Rosenblatt introduced a layered network with multiple Perceptrons which can be used to solve much more complex problems, and then depending on the amount of layers they can be classified into shallow neural networks and deep neural networks (typically if they have 2 or more hidden layers ). There is also networks that are not sorted into layers though these are uncommon.
                     </p>
                     <img src="..\Images\Net.png" alt="neural net">
                     <p id="caption">A neural network layout</p>
@@ -79,18 +81,18 @@
                     </p>
                     <h2>Backpropagation</h2>
                     <p>
-                        The way multilayer networks adjust the weights across the network is based on the amount of error in the output, now how do you know what weights need to be adjusted and by how much? <b>Backpropagation!</b> first shown off in the 1960s and popularized in 1989 by Rumelhart, Hinton and Williams in their paper “Learning representations by back-propagating errors”. Backpropagation uses a method called the <b>chain rule</b> where the first step is to take the output from the Output layer and put it into a <b>Cost Function</b>, which compares it to the expected output and gives you the error.
+                        The way multilayer networks adjust the weights across the network is based on the amount of error in the output, now how do you know what weights need to be adjusted and by how much? <b>Backpropagation!</b> first shown off in the 1960s and popularized in 1989 by Rumelhart, Hinton and Williams in their paper “Learning representations by back-propagating errors”. Backpropagation uses a method called the <b>chain rule</b> and to understand the chain rule we first need to understand some notation namely Leibniz notation.
                         <br> <br>
-                        Then we go from the output layer back through the Perceptrons and adjust the connections' weights accordingly, which is affected by the gradient of the Perceptrons which decreases the amount of change as you go backward. This process repeats each time trying to reduce the amount of error in the output. 
+                        In <b>Leibniz notation</b> <i>d</i>𝑥, <i>d</i>𝑦 is used to represent infinite decrements of 𝑥 and 𝑦. Whereas Δ𝑥 and Δ𝑦 represent finite increments of 𝑥 and 𝑦. <sup><i>d</i>𝑦</sup>&frasl;<sub><i>d</i>𝑥</sub> means the first derivative of 𝑦 with respect to 𝑥.
                     </p>
-
+                    <img src="..\Images\ChainRule.png" alt="neural net"id = "Sum">
+                    <p id="caption">The Chain Rule</p>
+                    <p>
+                        Simplified the chain rule is that calculating the instantaneous rate of change of <i>z</i> relative to 𝑦 where 𝑦 is relative to 𝑥 means you can calculate <i>z</i> relative to 𝑥 as the product of two rates of change 
+                        <br> <br>
+                        
+                    </p>
                 </div>
-            </div>
-            <div id="CodeSection">
-                <h1>Coding a Neural Network</h1>
-                <h3 id="caption" class ="line">using pure Python and the MNIST data set
-                </h3>
-
             </div>
         </main>
 

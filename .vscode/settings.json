@@ -1,7 +1,11 @@
 {
     "cSpell.words": [
         "Backpropagation",
+        "Culloch",
+        "dendrodendritic",
+        "MNIST",
         "Perceptrons",
-        "Rosenblatt"
+        "Rosenblatt",
+        "Rumelhart"
     ]
 }
