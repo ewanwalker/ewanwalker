@@ -20,6 +20,7 @@
     border: 1px black dashed;
     text-decoration: none;
     height: 100%;
+    width: 100%;
 }
 
 .item h1{
@@ -38,6 +39,7 @@
 
 .item p{
     text-align: justify;
+    bottom: 0px;
     width: 80%;
     padding-left: 10%;
     font-size: 2vw;
