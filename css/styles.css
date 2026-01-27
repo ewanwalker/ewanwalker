@@ -8,13 +8,13 @@ main {
     padding-top: 60px; 
 }
 
-
 nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 40px;
     padding-left: 10%;
+    color: black;
 }
 
 nav a::after {
@@ -23,6 +23,7 @@ nav a::after {
     width: 0;
     height: 3px;
     background: blueviolet;
+    color: black;
     transition: width 0.3s ease;
     margin-top: 5px;
 }
@@ -30,12 +31,14 @@ nav a::after {
 nav a:hover::after,
 nav a.ActivePage::after {
     width: 100%;
+    color: black;
 }
 
 nav a {
     padding: 10px 0;
     text-decoration: none;
     cursor: pointer;
+    color: black;
     border-bottom: 3px solid transparent;
     transition: transform 0.4s ease, border-bottom-color 0.4s ease;
 }
@@ -43,10 +46,12 @@ nav a {
 nav a:hover,
 nav a.ActivePage {
     transform: scale(1.15);
+    color: black;
 }
 
 nav a.ActivePage:hover {
     transform: scale(1.15);
+    color: black;
 }
 
 .intro-slice {
@@ -258,6 +263,12 @@ nav a.ActivePage:hover {
   background: #fff;
   text-align: center;
 }
+@media (max-width: 600px) {
+  .projects-section {
+    padding: 60px 5%;
+  }
+}
+
 
 .projects-section h2 {
   font-size: 2.5rem;
@@ -270,6 +281,7 @@ nav a.ActivePage:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
+  justify-items: center;
 }
 
 .project-card {
@@ -278,6 +290,7 @@ nav a.ActivePage:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   max-width: 350px; margin: 0 auto;
 }
 
 .project-card:hover {
