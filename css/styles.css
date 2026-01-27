@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    text-align: justify;
+}
+
+main {
+    padding-top: 60px; 
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    padding-left: 10%;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: blueviolet;
+    transition: width 0.3s ease;
+    margin-top: 5px;
+}
+
+nav a:hover::after,
+nav a.ActivePage::after {
+    width: 100%;
+}
+
+nav a {
+    padding: 10px 0;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: transform 0.4s ease, border-bottom-color 0.4s ease;
+}
+
+nav a:hover,
+nav a.ActivePage {
+    transform: scale(1.15);
+}
+
+nav a.ActivePage:hover {
+    transform: scale(1.15);
+}
+
+.intro-slice {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background: #0b0b12;
+    z-index: 9999;
+}
+
+.intro-slice.top {
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    animation: slideUp 1.5s ease-out forwards;
+}
+
+.intro-slice.bottom {
+    bottom: 0;
+    background-color: white;
+    clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 100%);
+    animation: slideDown 1.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.TitleBox {
+    text-align: center;
+    margin-top: 17vh;
+    margin-bottom: 15vh;
+}
+
+.TitleText {
+    font-size: 45px;
+    margin: 0 10%;
+}
+
+@media (min-width: 800px) {
+    .TitleText {
+        font-size: 60px;
+    }
+
+    .SubtitleText {
+        font-size: 30px;
+    }
+
+    .TitleBox {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    .ContactIcon {
+        width: 50px;
+    }
+
+}
+
+.SubtitleText {
+    text-align: center;
+    font-size: 24px;
+    margin: 0 10%;
+    color: #555;
+}
+
+.SectionHeader {
+    text-align: center;
+}
+
+.ContactIcons {
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.ContactIcons a {
+    text-decoration: none;
+}
+
+.ContactIcon {
+    width: 30px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    animation: stir 4s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes stir {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(4deg);
+    }
+
+    50% {
+        transform: rotate(-4deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.ContactIcon:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 6px #6262629e);
+    cursor: pointer;
+}
+
+.section {
+    position: relative;
+    padding: 6rem 1.5rem;
+    background: #050509;
+    color: #f5f5f5;
+}
+
+.section--top-slice {
+    clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 100%);
+}
+
+.tabs {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #111;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 0 20px #00000055;
+}
+
+.tab-list {
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+
+.tab {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tab:hover {
+    background: #1a1a1f;
+    color: #fff;
+}
+
+.tab.active {
+    color: blueviolet;
+    border-bottom: 2px solid blueviolet;
+}
+
+.tab-panels {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.tab-panel h3 {
+    margin: 0.5rem 0 0.1rem;
+}
+
+.tab-panel p {
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem;
+    color: #ccc;
+}
+
+.tab-panel p .description {
+    font-size: 0.5rem;
+    margin: 0 0 0.5rem;
+    color: #ccc;
+}
+
+.projects-section {
+  padding: 80px 10%;
+  background: #fff;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.project-card .tech {
+  font-size: 0.85rem;
+  color: blueviolet;
+  font-weight: 500;
+}

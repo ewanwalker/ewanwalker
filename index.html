@@ -1,53 +1,101 @@
+<!DOCTYPE html>
+
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Ewan Walker</title>
-	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
-        <link rel="stylesheet" media="screen and (max-device-width: 1000px)" href="..\CSS\slimStyles.css" />
-        <link rel="stylesheet" media="screen and (min-device-width: 1001px)" href="..\CSS\wideStyles.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    </head>
 
-    <body>
-        <header>
-            <nav>
-                <h1 aria-labelledby="Developers Initials"> EW </h1> 
-                <a href="..\HTML\portfolio.html"> Portfolio</a>
-                <a href="..\HTML\cv.html"> CV</a>
-                <a href="..\index.html"> Home</a>
-            </nav>
-        </header>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ewan Walker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="#">
+    <script src="javascript/scripts.js" defer></script>
+</head>
 
-        <main>
-            <section id="imagequote">
-                <img src="..\Images\BWOutline.jpg" alt="Black silhouettes of the developer and a friend">
-                <h1>“Design is where science and art break even.”</h1>
-                <h2>- R.Matthews</h2>
-            </section>
-            <section id="intro">
-                <h1>About Me</h1>
-                <h2>
-                    Hello and welcome to my Website, My name is Ewan Walker (thats me on the right in the following image!) Im currently studying at Newcastle university doing computer science, i have a passion for Artificial intelligence, 
-                    Web Development as well as Data Analytics. Outside of studying and going to university i love to climb, play both football & Rugby alongside spending time in nature.
-                </h2>
-                <div id="image">
-                    <img src="..\Images\Classy.jpg" alt="Me with friends">
+<body>
+    <header>
+        <nav>
+            <a href="#" class="ActivePage"> Home</a>
+            <a href="html/Terminal.Html"> Terminal</a>
+            <a href="resources/Ewan_Walker-CV.pdf"> View CV</a>
+        </nav>
+    </header>
+    <main>
+        <div class="intro-slice top"></div>
+        <div class="intro-slice bottom"></div>
+        <div class="TitleBox">
+            <h1 class="TitleText" style="color:blueviolet">Ewan Walker</h1>
+            <h2 class="SubtitleText">Advanced Computer Science MSc</h2>
+            <p class="SubtitleText">Newcastle Upon Tyne</p>
+            <div class="ContactIcons">
+                <a href="mailto:ewanwalker1@gmail.com">
+                    <img src="images/Email.png" alt="Email Logo" class="ContactIcon">
+                </a>
+                <a href="https://github.com/ewanwalker">
+                    <img src="images/GitHub_Logo.png" alt="GitHub Logo" class="ContactIcon">
+                </a>
+                <a href="https://www.linkedin.com/in/ewan-walker-582618293/">
+                    <img src="images/LinkedIn_Logo.png" alt="LinkedIn Logo" class="ContactIcon">
+                </a>
+            </div>
+        </div>
+        <section class="section section--top-slice">
+            <div class="tabs">
+                <div class="tab-list" role="tablist">
+                    <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-education"
+                        id="tab-education">
+                        Education
+                    </button>
+                    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-experience"
+                        id="tab-experience">
+                        Experience
+                    </button>
                 </div>
-                <h1>Why Build This Website?</h1>
-                <h2>
-                    In the summer of 2024 I participated in a summer exchange program to The Hong Kong University of Science and Technology and studied astrophysics as well as pursued my own research on neural networks 
-                    and artificial intelligence. During my time studying in Hong Kong I decided to completely overhaul my previously derelict and unused website and turn it into a
-                    professional and functional space to show off my research projects, portfolio of past work as well as show off a little bit about myself. i took it upon myself
-                    to use the google web.dev archive and teach myself the intricacies of web development and in turn I have developed this website to be both stylish, functional and accessible for a wide range of users.
-                </h2>
-                
+                <div class="tab-panels">
+                    <div class="tab-panel active" role="tabpanel" id="panel-education" aria-labelledby="tab-education">
+                        <h3>MSc Advanced Computer Science</h3>
+                        <p>Newcastle University | 2025 - 2026</p>
+                        <p class="description"> Current Grade: Distinction (72%)</p>
+                        <p class="description"> Modules: Secure Software Development, Risk and Trust Managment,
+                            Model-Based Systems Engineering, Machine Learning, Generative AI for Buisness, Enterprise
+                            Software and Services, Advanced Programming in Java, Group Project</p>
+                        <h3>BSc Computer Science</h3>
+                        <p>Newcastle University | 2022 - 2025</p>
+                        <p class="description"> Grade Acheived: 2:1 (66%)</p>
+                        <p class="description"> Award Nominated Dissertation (Grade: 77%, Title: Evaluating the
+                            Feasibility of Automated Lesion Masking for Normative Lesion Network Mapping)</p>
+                        <h3>Study Abroad Programme - Astrophysics and Astronomy</h3>
+                        <p>Hong Kong University of Science and Technology | Summer 2024</p>
+                        <p class="description">Attended ChinaVis 2024, learning methods to visualize data.</p>
+                    </div>
+                    <div class="tab-panel" role="tabpanel" id="panel-experience" aria-labelledby="tab-experience">
+                        <h3>Waiter / Bartender / Chef</h3>
+                        <p>The Saddle Rooms | 2022 - Present</p>
+                         <p class="description"> Working in a Michelin guide restaurant providing high quality service to customers. </p>
+                        <h3>Waiter</h3>
+                        <p>The Sandpiper Inn | 2019 - 2022</p>
+                         <p class="description">My first introduction to a customer facing role for a Michelin guide gastropub. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: black;">
+            <section class="section section--top-slice" style="background-color: #ffffff;">
+                <section class="projects-section">
+                    <h2>Projects.</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="images/WholeBrainTract_Compressed.gif" alt="Wholebrain-Tract">
+                            <h3>Evaluating The Feasibility of Automated Lesion Masking for Normative Lesion Network Mapping</h3>
+                            <p>Dissertation Project · Spring 2024</p>
+                            <p>Automatic Delineation of Meningioma using Neuroscientific tools and comparion with hand delineation using data that was provided by the Liverpool Neuroscience Biobank
+and initially collected by the NHS Walton Centre Foundation Trust. </p>
+                            <p class="tech">Bash · ANTs · FSL · FreeSurfer · MRtrix3</p>
+                        </div>
+                    </div>
+                </section>
             </section>
-        </main>
+        </section>
+    </main>
+</body>
 
-        <footer>
-            <p>&copy;2024 EW website. All rights reserved.</p>
-        </footer>
-    </body>
 </html>
