@@ -280,7 +280,7 @@ nav a.ActivePage:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 70px 20px;
     align-items: stretch;
 }
@@ -311,18 +311,19 @@ nav a.ActivePage:hover {
 }
 
 .project-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
 .project-card p {
     margin: 0.25rem 0;
+    font-size: 0.8rem;
     line-height: 1.4;
 }
 
 .project-card .tech {
     margin-top: auto;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     color: blueviolet;
     opacity: 0.8;
 }
